@@ -1,0 +1,225 @@
+.exercise-manager {
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.toggle-form-btn {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #3d3d3d;
+  border-radius: 8px;
+}
+
+.add-exercise-form input,
+.add-exercise-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.add-exercise-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.add-exercise-form button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exercises-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.exercise-card {
+  background-color: #3d3d3d;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.log-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.exercise-card h4 {
+  color: #4ecdc4;
+  margin: 0;
+}
+
+.exercise-card p {
+  color: #ccc;
+  margin: 0.2rem 0;
+}
+
+.log-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.2rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #1d1d1d;
+  color: white;
+}
+
+.submit-log-btn {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.progress-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.progress-positive {
+  background-color: #4caf50;
+}
+
+.progress-negative {
+  background-color: #f44336;
+}
+
+.progress-neutral {
+  background-color: #ffeb3b;
+}
+
+.exercise-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.charts-button {
+  background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.progress-charts {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+}
+
+.progress-comparison {
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.comparison-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.exercise-history {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  color: #ccc;
+}
+
+.history-item span {
+  margin-right: 0.5rem;
+}
+
+.edit-exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-exercise-form input,
+.edit-exercise-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.edit-exercise-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}

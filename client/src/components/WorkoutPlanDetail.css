@@ -1,0 +1,139 @@
+.plan-detail {
+  padding: 1rem;
+}
+
+.days-section {
+  margin-top: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-day-form {
+  background-color: #3d3d3d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.add-day-form .form-group {
+  margin-bottom: 0.5rem;
+}
+
+.add-day-form label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #ccc;
+}
+
+.add-day-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.add-day-form button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.days-list {
+  margin-top: 1rem;
+}
+
+.day-card {
+  background-color: #3d3d3d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.day-card:hover {
+  background-color: #4d4d4d;
+}
+
+.day-card.selected {
+  background-color: #4d4d4d;
+  border: 2px solid #ff6b6b;
+}
+
+.day-card h4 {
+  margin-bottom: 0.5rem;
+  color: #4ecdc4;
+}
+
+.day-card p {
+  color: #ccc;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.delete-plan-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #3d3d3d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.day-content {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.day-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.edit-day-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-day-form input {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+}

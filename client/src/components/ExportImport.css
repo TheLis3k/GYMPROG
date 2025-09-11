@@ -1,0 +1,47 @@
+.export-import {
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.export-section, .import-section {
+  margin-bottom: 2rem;
+}
+
+.export-section h4, .import-section h4 {
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+
+.export-btn, .import-btn {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.export-btn:disabled, .import-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  color: #4caf50;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+}
+
+.error {
+  color: #f44336;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+}
