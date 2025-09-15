@@ -11,18 +11,20 @@ const workoutPlansRoutes = require('./routes/workoutPlans');
 const workoutDaysRoutes = require('./routes/workoutDays');
 const exercisesRoutes = require('./routes/exercises');
 const exerciseLogsRoutes = require('./routes/exerciseLogs');
-const exportImportRoutes = require('./routes/exportImport'); // Dodaj tę linię
+const exportImportRoutes = require('./routes/exportImport');
+const statisticsRoutes = require('./routes/statistics'); 
 
 // Middleware
 app.use(cors());
-app.use(express.json({ limit: '10mb' })); // Zwiększ limit dla dużych importów
+app.use(express.json({ limit: '10mb' }));
 
 // Routes
 app.use('/api/workout-plans', workoutPlansRoutes);
 app.use('/api/workout-days', workoutDaysRoutes);
 app.use('/api/exercises', exercisesRoutes);
 app.use('/api/exercise-logs', exerciseLogsRoutes);
-app.use('/api/export-import', exportImportRoutes); // Dodaj tę linię
+app.use('/api/export-import', exportImportRoutes);
+app.use('/api/statistics', statisticsRoutes); 
 
 // Basic route
 app.get('/api', (req, res) => {

@@ -4,6 +4,7 @@ import WorkoutPlanCreator from './components/WorkoutPlanCreator'
 import WorkoutPlanList from './components/WorkoutPlanList'
 import WorkoutPlanDetail from './components/WorkoutPlanDetail'
 import ExportImport from './components/ExportImport'
+import Statistics from './components/Statistics'
 import './App.css'
 
 function App() {
@@ -54,9 +55,17 @@ function App() {
             </button>
           )}
           {currentView === 'plan-list' && (
-            <button onClick={handleCreatePlan} className="create-button">
-              + Create New Plan
-            </button>
+            <div className="main-actions">
+              <button onClick={handleCreatePlan} className="create-button">
+                + Create New Plan
+              </button>
+              <button 
+                onClick={() => setCurrentView('statistics')}
+                className="stats-button"
+              >
+                View Statistics
+              </button>
+            </div>
           )}
         </div>
 
@@ -77,6 +86,17 @@ function App() {
             plan={selectedPlan} 
             onPlanDeleted={handlePlanDeleted}
           />
+        )}
+        {currentView === 'statistics' && (
+          <>
+            <Statistics />
+            <button 
+              onClick={() => setCurrentView('plan-list')}
+              className="back-button"
+            >
+              ← Back to Plans
+            </button>
+          </>
         )}
       </main>
     </div>

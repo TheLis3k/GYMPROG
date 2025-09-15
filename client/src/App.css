@@ -17,3 +17,22 @@
 .back-button:hover {
   background-color: #4d4d4d;
 }
+
+.main-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.stats-button {
+  background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.stats-button:hover {
+  opacity: 0.9;
+}

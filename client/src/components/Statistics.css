@@ -1,0 +1,77 @@
+.statistics {
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #3d3d3d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #4ecdc4;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.progress-section {
+  background-color: #3d3d3d;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.progress-section h4 {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.progress-item {
+  margin-bottom: 1rem;
+}
+
+.exercise-name {
+  display: block;
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b 0%, #ee5a24 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.improvement {
+  display: block;
+  color: #4ecdc4;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
