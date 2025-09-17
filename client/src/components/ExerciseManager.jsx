@@ -70,6 +70,54 @@ const ExerciseManager = ({ day, onExerciseChange }) => {
     }
   }
 
+  const handleEditLog = async (logData) => {
+    try {
+      const response = await fetch(`/api/exercise-logs/${logData.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(logData)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Odśwież historię ćwiczeń
+      if (showLogForm) {
+        fetchExerciseHistory(showLogForm);
+      }
+    } catch (error) {
+      console.error('Error updating exercise log:', error);
+      setError(error.message);
+    }
+  };
+
+  const handleDeleteLog = async (logId) => {
+    if (!window.confirm('Are you sure you want to delete this log entry?')) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/exercise-logs/${logId}`, {
+        method: 'DELETE'
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Odśwież historię ćwiczeń
+      if (showLogForm) {
+        fetchExerciseHistory(showLogForm);
+      }
+    } catch (error) {
+      console.error('Error deleting exercise log:', error);
+      setError(error.message);
+    }
+  };
+
   const handleAddExercise = async (e) => {
     e.preventDefault()
     try {
@@ -98,7 +146,7 @@ const ExerciseManager = ({ day, onExerciseChange }) => {
     }
   }
 
-   const handleDeleteExercise = async (exerciseId, exerciseName) => {
+  const handleDeleteExercise = async (exerciseId, exerciseName) => {
     if (!window.confirm(`Are you sure you want to delete "${exerciseName}"? This will delete all associated logs.`)) {
       return
     }
@@ -186,10 +234,10 @@ const ExerciseManager = ({ day, onExerciseChange }) => {
     )
   }
 
-  const ExerciseHistory = ({ exerciseId }) => {
-    const history = exerciseHistory[exerciseId] || []
+  const ExerciseHistory = ({ exerciseId, onEditLog, onDeleteLog }) => {
+    const history = exerciseHistory[exerciseId] || [];
     
-    if (history.length === 0) return null
+    if (history.length === 0) return null;
     
     return (
       <div className="exercise-history">
@@ -201,10 +249,24 @@ const ExerciseManager = ({ day, onExerciseChange }) => {
             <span>Weight: {log.weight}kg</span>
             {log.duration && <span>Time: {log.duration}s</span>}
             {log.difficulty_emoji && <span>Difficulty: {log.difficulty_emoji}</span>}
+            <div className="history-actions">
+              <button 
+                onClick={() => onEditLog(log)}
+                className="action-btn edit"
+              >
+                Edit
+              </button>
+              <button 
+                onClick={() => onDeleteLog(log.id)}
+                className="action-btn delete"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))}
       </div>
-    )
+    );
   }
 
   const handleLogExercise = async (exerciseId, logData) => {
@@ -348,7 +410,11 @@ const ExerciseManager = ({ day, onExerciseChange }) => {
                 <p>Sets: {exercise.sets}</p>
 
 
-            <ExerciseHistory exerciseId={exercise.id} />
+                  <ExerciseHistory 
+                    exerciseId={exercise.id}
+                    onEditLog={handleEditLog}
+                    onDeleteLog={handleDeleteLog}
+                  />
 
             {showLogForm === exercise.id && (
               <ExerciseLogForm 

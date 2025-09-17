@@ -223,3 +223,73 @@
   min-height: 60px;
   resize: vertical;
 }
+
+.chart-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-select,
+.metric-select {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.chart-stats {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #3d3d3d;
+  border-radius: 8px;
+}
+
+.chart-stats h5 {
+  color: #4ecdc4;
+  margin-bottom: 0.5rem;
+}
+
+.chart-stats p {
+  margin: 0.2rem 0;
+  color: #ccc;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin: 4px 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.history-actions .action-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.history-actions .action-btn.edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.history-actions .action-btn.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.history-actions .action-btn:hover {
+  opacity: 0.8;
+}

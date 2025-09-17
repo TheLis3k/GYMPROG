@@ -98,4 +98,33 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+// Update an exercise log
+router.put('/:id', (req, res) => {
+  const logId = req.params.id;
+  const { reps, weight, duration, difficulty_emoji } = req.body;
+  const db = new sqlite3.Database(dbPath);
+
+  const sql = `UPDATE exercise_logs 
+               SET reps = ?, weight = ?, duration = ?, difficulty_emoji = ?
+               WHERE id = ?`;
+  
+  db.run(sql, [reps, weight, duration, difficulty_emoji, logId], function(err) {
+    db.close();
+
+    if (err) {
+      console.error('Error updating exercise log:', err);
+      res.status(500).json({ error: err.message });
+      return;
+    }
+    res.json({ 
+      id: logId, 
+      reps, 
+      weight, 
+      duration, 
+      difficulty_emoji 
+    });
+  });
+});
+
 module.exports = router;
+
